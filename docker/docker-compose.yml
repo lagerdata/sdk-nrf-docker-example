@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  my_build_dev_service:
+    image: nordicplayground/nrfconnect-sdk:main
+    ports:
+      - "8080:8080"    
+    command: /bin/bash
+    environment:
+      - CI=false
+    tty: true
+    volumes:
+      - ..:/workdir/project
+      - type: bind
+        source: ${HOME}/.lager
+        target: /root/.lager

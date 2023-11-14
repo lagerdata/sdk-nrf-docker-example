@@ -1,0 +1,13 @@
+{
+    "name": "My Dev Container",
+    "dockerComposeFile": "../docker/docker-compose.yml",
+    "service": "my_build_dev_service",
+	"workspaceFolder": "/workdir/project",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.cpptools-extension-pack"
+			]
+		}
+	}
+ }
